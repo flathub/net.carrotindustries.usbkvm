@@ -135,8 +135,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/carrotIndustries/usbkvm/releases/download/v0.0.19/usbkvm-v0.0.19.tar.gz",
-                    "sha256": "4a5f10a7c1d339c570a3410d1d9bc59d0f8de1d5fac4fbff497278831f969164"
+                    "url": "https://github.com/carrotIndustries/usbkvm/releases/download/v0.1.0/usbkvm-v0.1.0.tar.gz",
+                    "sha256": "ac1aeef6c0bd906662f6c4d3cff158ea45c361a52ef0ae2e025075961786df07"
                 }
             ]
         }
