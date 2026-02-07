@@ -19,7 +19,6 @@
         "*.la",
         "/include",
         "/lib/*/*.h",
-        "/share/pkgconfig",
         "/lib/atkmm-1.6",
         "/lib/cairomm-1.0",
         "/lib/gdkmm-3.0",
@@ -31,23 +30,15 @@
         "/lib/pkgconfig",
         "/lib/cmake",
         "/lib/sigc++-3.0",
-        "/lib/sigc++-2.0"
+        "/lib/sigc++-2.0",
+        "/share/devhelp",
+        "/share/doc",
+        "/share/pkgconfig"
     ],
     "modules": [
         {
-           "name": "mm-common",
-           "cleanup": [ "*" ],
-           "sources": [
-               {
-                   "type": "archive",
-                   "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.7.tar.xz",
-                   "sha256": "494abfce781418259b1e9d8888c73af4de4b6f3be36cc75d9baa8baa0f2a7a39"
-               }
-           ]
-        },
-        {
             "name": "sigc++",
-            "config-opts": [ "--disable-documentation" ],
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
@@ -70,7 +61,7 @@
         },
         {
             "name": "cairomm",
-            "config-opts": [ "--disable-documentation" ],
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
