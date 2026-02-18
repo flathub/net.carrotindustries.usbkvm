@@ -36,88 +36,7 @@
         "/share/pkgconfig"
     ],
     "modules": [
-        {
-            "name": "sigc++",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/libsigc++/2.12/libsigc++-2.12.1.tar.xz",
-                    "sha256": "a9dbee323351d109b7aee074a9cb89ca3e7bcf8ad8edef1851f4cf359bd50843"
-                }
-            ]
-        },
-        {
-            "name": "glibmm",
-            "config-opts": [ "-Dbuild-documentation=false" ],
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.8.tar.xz",
-                    "sha256": "64f11d3b95a24e2a8d4166ecff518730f79ecc27222ef41faf7c7e0340fc9329"
-                }
-            ]
-        },
-        {
-            "name": "cairomm",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://www.cairographics.org/releases/cairomm-1.14.5.tar.xz",
-                    "sha256": "70136203540c884e89ce1c9edfb6369b9953937f6cd596d97c78c9758a5d48db"
-                }
-            ]
-        },
-        {
-            "name": "pangomm",
-            "config-opts": [ "-Dbuild-documentation=false" ],
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/pangomm/2.46/pangomm-2.46.4.tar.xz",
-                    "sha256": "b92016661526424de4b9377f1512f59781f41fb16c9c0267d6133ba1cd68db22"
-                }
-            ]
-        },
-        {
-            "name": "atkmm",
-            "config-opts": [ "-Dbuild-documentation=false" ],
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.4.tar.xz",
-                    "sha256": "0a142a8128f83c001efb8014ee463e9a766054ef84686af953135e04d28fdab3"
-                }
-            ]
-        },
-        {
-            "name": "gtkmm",
-            "config-opts": [ "-Dbuild-documentation=false" ],
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.10.tar.xz",
-                    "sha256": "7ab7e2266808716e26c39924ace1fb46da86c17ef39d989624c42314b32b5a76"
-                }
-            ]
-        },
-        {
-            "name": "hidapi",
-            "buildsystem": "cmake-ninja",
-            "config-opts": ["-DHIDAPI_WITH_LIBUSB=FALSE"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/libusb/hidapi/archive/hidapi-0.15.0.tar.gz",
-                    "sha256": "5d84dec684c27b97b921d2f3b73218cb773cf4ea915caee317ac8fc73cef8136"
-                }
-            ]
-        },
+        "gtkmm.json",
         {
             "name": "usbkvm",
             "buildsystem": "meson",
@@ -132,6 +51,5 @@
                 }
             ]
         }
-
     ]
 }
