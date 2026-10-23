@@ -1,8 +1,8 @@
 {
     "app-id": "net.carrotindustries.usbkvm",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "26.08",
+    "sdk": "org.freedesktop.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.golang"
     ],
@@ -15,39 +15,29 @@
         "--filesystem=xdg-run/pipewire-0:ro"
     ],
     "cleanup": [
-        "*.a",
-        "*.la",
         "/include",
-        "/lib/*/*.h",
-        "/lib/atkmm-1.6",
-        "/lib/cairomm-1.0",
-        "/lib/gdkmm-3.0",
-        "/lib/giomm-2.4",
-        "/lib/glibmm-2.4",
-        "/lib/gtkmm-3.0",
-        "/lib/oce-0.18",
-        "/lib/pangomm-1.4",
-        "/lib/pkgconfig",
-        "/lib/cmake",
-        "/lib/sigc++-3.0",
-        "/lib/sigc++-2.0",
-        "/share/devhelp",
-        "/share/doc",
-        "/share/pkgconfig"
+        "/lib/pkgconfig"
     ],
     "modules": [
         "gtkmm.json",
         {
             "name": "usbkvm",
             "buildsystem": "meson",
-            "build-options" : {
+            "build-options": {
                 "prepend-path": "/usr/lib/sdk/golang/bin"
             },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/carrotIndustries/usbkvm/releases/download/v0.3.1/usbkvm-v0.3.1.tar.gz",
-                    "sha256": "2986c2e2d0a543526899b10bc75c989ee5409c2975ccbe49bbaeb6a2036199b7"
+                    "url": "https://github.com/carrotIndustries/usbkvm/releases/download/v0.3.2/usbkvm-v0.3.2.tar.gz",
+                    "sha256": "66ba6895bf4d80064b33c484553e7d8c69eb57b9ffd49a8b119119f273aa7b0b",
+                    "x-checker-data": {
+                        "is-main-source": true,
+                        "type": "json",
+                        "url": "https://api.github.com/repos/carrotIndustries/usbkvm/releases/latest",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"usbkvm-v\" + $version + \".tar.gz\") | .browser_download_url"
+                    }
                 }
             ]
         }
